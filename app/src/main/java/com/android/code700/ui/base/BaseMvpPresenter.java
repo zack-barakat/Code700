@@ -4,6 +4,7 @@ import android.content.Context;
 import com.android.code700.data.ErrorAction;
 import com.android.code700.data.IAppErrorHelper;
 import com.android.code700.data.IDataManager;
+import com.android.code700.data.repositories.IOffersRepository;
 import com.android.code700.di.qualifiers.ApplicationContext;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.CompositeDisposable;
@@ -18,6 +19,8 @@ public abstract class BaseMvpPresenter<V extends BaseView> implements BasePresen
     protected IDataManager mDataManager;
     protected IAppErrorHelper mAppErrorHelper;
     protected CompositeDisposable disposableSubscription = new CompositeDisposable();
+    protected IOffersRepository mOffersRepository;
+
     WeakReference<V> mViewWeak;
 
     boolean isFirstTime = true;
@@ -27,6 +30,7 @@ public abstract class BaseMvpPresenter<V extends BaseView> implements BasePresen
         mDataManager = dataManager;
         this.mAppContext = mDataManager.getApplicationContext();
         this.mAppErrorHelper = mDataManager.getAppErrorHelper();
+        this.mOffersRepository = mDataManager.getOffersRepository();
     }
 
     @Override
