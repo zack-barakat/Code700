@@ -14,11 +14,14 @@ import retrofit2.http.Query;
 
 public interface IApiHelper {
 
-    @GET("getoffers.php?action=alloffers")
+    @GET("getOffers.php?action=allOffers")
     Observable<OffersResponse> getOffers(@Query("page") int page);
 
-    @GET("getoffers.php?action=selectOffer")
+    @GET("getOffers.php?action=selectOffer")
     Observable<OfferResponse> getOffer(@Query("offerid") String offerId);
+
+    @GET("getOffers.php?action=allOffers")
+    Observable<OffersResponse> getOffers(@Query("q") String query);
 
     class Factory {
         public static final int NETWORK_CALL_TIMEOUT = 30;

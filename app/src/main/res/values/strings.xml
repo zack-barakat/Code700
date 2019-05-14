@@ -5,5 +5,7 @@
     <string name="message_error_unknown">Something went wrong</string>
     <string name="message_connection_error">Your connection seems lost</string>
     <string name="message_connect_internet">Connect to the internet</string>
+    <string name="title_offers">Offers</string>
+    <string name="action_search">Search</string>
 
 </resources>

@@ -28,10 +28,12 @@ data class OfferResponse(
 data class Offer(
     val id: Int,
     val title: String,
-    @SerializedName("business_name") val business_name: String,
-    @SerializedName("company_id") val company_id: Int,
+    @SerializedName("business_name") val businessName: String,
+    @SerializedName("company_id") val companyId: Int,
     @SerializedName("images") val images: String
-) : Parcelable
+) : Parcelable {
+    var type: String = "OFFER"
+}
 
 @Parcelize
 data class OfferDetail(

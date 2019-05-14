@@ -52,7 +52,8 @@ dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "com.android.support:appcompat-v7:$androidSupportVersion"
+    implementation "com.android.support:design:$androidSupportVersion"
 
     // networking
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
@@ -75,6 +76,10 @@ dependencies {
     //kotlin
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
     implementation 'androidx.core:core-ktx:0.3'
+
+    // image loading
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    implementation 'jp.wasabeef:glide-transformations:2.0.2'
 
     // test tools
     testImplementation 'junit:junit:4.12'

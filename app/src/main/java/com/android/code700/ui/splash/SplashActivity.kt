@@ -4,6 +4,8 @@ import android.os.Bundle
 import com.android.code700.R
 import com.android.code700.ui.base.BaseMvpActivity
 import com.android.code700.ui.base.BasePresenter
+import com.android.code700.ui.offers.OffersActivity
+import org.jetbrains.anko.startActivity
 import javax.inject.Inject
 
 class SplashActivity : BaseMvpActivity(), SplashContracts.View {
@@ -32,6 +34,6 @@ class SplashActivity : BaseMvpActivity(), SplashContracts.View {
     }
 
     override fun showMainScreen() {
-
+        startActivity<OffersActivity>()
     }
 }
