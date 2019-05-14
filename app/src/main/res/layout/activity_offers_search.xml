@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cvSearchContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackgroundDarkTransparent"
+        android:visibility="gone">
+
+    <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_ui_padding_small"
+            android:layout_marginTop="@dimen/common_ui_padding_medium"
+            android:layout_marginEnd="@dimen/common_ui_padding_small"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/tvNoResult"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/windowBackgroundLight"
+            android:gravity="center_horizontal"
+            android:paddingStart="@dimen/common_ui_padding_small"
+            android:paddingTop="@dimen/common_ui_padding_medium"
+            android:paddingEnd="@dimen/common_ui_padding_small"
+            android:text="@string/text_no_search_result"
+            android:textColor="@color/primaryTextLight"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSearchOffers"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/windowBackgroundLight"
+            android:clipToPadding="true"
+            android:paddingTop="@dimen/common_ui_padding_extra_small"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="12"
+            tools:listitem="@layout/item_offer"/>
+
+</android.support.constraint.ConstraintLayout>

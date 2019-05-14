@@ -54,6 +54,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$androidSupportVersion"
     implementation "com.android.support:design:$androidSupportVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 
     // networking
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'

@@ -29,5 +29,9 @@
                 android:name=".ui.offers.OffersActivity"
                 android:theme="@style/AppTheme"/>
 
+        <activity
+                android:name=".ui.searchoffers.OffersSearchActivity"
+                android:theme="@style/AppTheme"/>
+
     </application>
 </manifest>

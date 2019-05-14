@@ -5,6 +5,8 @@ import android.content.Context;
 import com.android.code700.di.qualifiers.ActivityContext;
 import com.android.code700.ui.offers.OffersContracts;
 import com.android.code700.ui.offers.OffersPresenter;
+import com.android.code700.ui.searchoffers.OffersSearchContracts;
+import com.android.code700.ui.searchoffers.OffersSearchPresenter;
 import com.android.code700.ui.splash.SplashContracts;
 import com.android.code700.ui.splash.SplashPresenter;
 import dagger.Module;
@@ -38,5 +40,10 @@ public class ActivityModule {
     @Provides
     OffersContracts.Presenter<OffersContracts.View> provideOffersPresenter(OffersPresenter offersPresenter) {
         return offersPresenter;
+    }
+
+    @Provides
+    OffersSearchContracts.Presenter<OffersSearchContracts.View> provideOffersSearchPresenter(OffersSearchPresenter offersSearchPresenter) {
+        return offersSearchPresenter;
     }
 }
