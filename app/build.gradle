@@ -8,6 +8,8 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'org.jetbrains.kotlin.android.extensions'
 
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -81,6 +83,9 @@ dependencies {
     // image loading
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     implementation 'jp.wasabeef:glide-transformations:2.0.2'
+
+    // firebase
+    implementation 'com.google.firebase:firebase-core:16.0.9'
 
     // test tools
     testImplementation 'junit:junit:4.12'

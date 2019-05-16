@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "455537931488",
+    "firebase_url": "https://code-700.firebaseio.com",
+    "project_id": "code-700",
+    "storage_bucket": "code-700.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455537931488:android:eabf45cec6ede9f2",
+        "android_client_info": {
+          "package_name": "com.android.code700"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455537931488-q6tja42jofh9ml56q5ndcsn0ef4advsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp5jA_0YoZXAOAK5m55pQeSKBrwzhMbxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455537931488-q6tja42jofh9ml56q5ndcsn0ef4advsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
