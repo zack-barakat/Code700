@@ -3,6 +3,8 @@ package com.android.code700.di.module;
 import android.app.Activity;
 import android.content.Context;
 import com.android.code700.di.qualifiers.ActivityContext;
+import com.android.code700.ui.offerdetail.OfferDetailContracts;
+import com.android.code700.ui.offerdetail.OfferDetailPresenter;
 import com.android.code700.ui.offers.OffersContracts;
 import com.android.code700.ui.offers.OffersPresenter;
 import com.android.code700.ui.searchoffers.OffersSearchContracts;
@@ -45,5 +47,10 @@ public class ActivityModule {
     @Provides
     OffersSearchContracts.Presenter<OffersSearchContracts.View> provideOffersSearchPresenter(OffersSearchPresenter offersSearchPresenter) {
         return offersSearchPresenter;
+    }
+
+    @Provides
+    OfferDetailContracts.Presenter<OfferDetailContracts.View> provideOfferDetailPresenter(OfferDetailPresenter offerDetailPresenter) {
+        return offerDetailPresenter;
     }
 }

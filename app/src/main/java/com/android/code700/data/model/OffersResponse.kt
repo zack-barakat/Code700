@@ -21,7 +21,7 @@ data class OffersResponse(
 @Parcelize
 data class OfferResponse(
     var error: Boolean,
-    @SerializedName("data") var offers: OfferDetail
+    @SerializedName("data") var offer: OfferDetail
 ) : Parcelable
 
 @Parcelize
@@ -61,7 +61,7 @@ data class OfferDetail(
     val address: String?,
     val longitude: Float?,
     val latitude: Float?,
-    @SerializedName("link_category") val email_verified: Number?,
+    @SerializedName("email_verified") val emailVerified: Number?,
     val username: String?,
     @SerializedName("company_id") val companyId: Int?,
     val visits: Int?,

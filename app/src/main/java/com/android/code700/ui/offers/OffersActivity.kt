@@ -1,7 +1,6 @@
 package com.android.code700.ui.offers
 
 import android.os.Bundle
-import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.Menu
@@ -9,6 +8,7 @@ import com.android.code700.R
 import com.android.code700.data.model.Offer
 import com.android.code700.ui.base.BaseMvpActivity
 import com.android.code700.ui.base.BasePresenter
+import com.android.code700.ui.offerdetail.OfferDetailActivity
 import com.android.code700.ui.searchoffers.OffersSearchActivity
 import kotlinx.android.synthetic.main.activity_offers.*
 import org.jetbrains.anko.startActivity
@@ -101,6 +101,6 @@ class OffersActivity : BaseMvpActivity(), OffersContracts.View {
     }
 
     override fun openOfferScreen(offerId: Int) {
-
+        OfferDetailActivity.openActivity(this, offerId)
     }
 }

@@ -14,7 +14,7 @@ interface IOffersRepository {
 
     fun getOffers(query: String): Observable<OffersResponse>
 
-    fun getOffer(offerId: String): Observable<OfferResponse>
+    fun getOffer(offerId: Int): Observable<OfferResponse>
 }
 
 @ApplicationScope
@@ -41,7 +41,7 @@ open class OffersRepository @Inject constructor(private val apiHelper: IApiHelpe
         return apiHelper.getOffers(query)
     }
 
-    override fun getOffer(offerId: String): Observable<OfferResponse> {
+    override fun getOffer(offerId: Int): Observable<OfferResponse> {
         return apiHelper.getOffer(offerId)
     }
 }

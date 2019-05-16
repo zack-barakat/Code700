@@ -10,6 +10,7 @@ import com.android.code700.ui.base.BaseMvpActivity
 import com.android.code700.R
 import com.android.code700.data.model.Offer
 import com.android.code700.ui.base.BasePresenter
+import com.android.code700.ui.offerdetail.OfferDetailActivity
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -120,6 +121,6 @@ class OffersSearchActivity : BaseMvpActivity(), OffersSearchContracts.View, Sear
     }
 
     override fun openOfferDetail(offerId: Int) {
-
+        OfferDetailActivity.openActivity(this, offerId)
     }
 }

@@ -4,6 +4,7 @@ import com.android.code700.data.model.OfferResponse;
 import com.android.code700.data.model.OffersResponse;
 import io.reactivex.Observable;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import retrofit2.Retrofit;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -18,7 +19,7 @@ public interface IApiHelper {
     Observable<OffersResponse> getOffers(@Query("page") int page);
 
     @GET("getOffers.php?action=selectOffer")
-    Observable<OfferResponse> getOffer(@Query("offerid") String offerId);
+    Observable<OfferResponse> getOffer(@Query("offerid") int offerId);
 
     @GET("getOffers.php?action=allOffers")
     Observable<OffersResponse> getOffers(@Query("q") String query);
