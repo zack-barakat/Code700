@@ -27,6 +27,10 @@ class OfferDetailActivity : BaseMvpActivity(), OfferDetailContracts.View {
             val intent = context.intentFor<OfferDetailActivity>(Pair(EXTRA_OFFER_ID, offerId))
             context.startActivity(intent)
         }
+
+        fun getStartIntent(context: Context, offerId: Int): Intent {
+            return context.intentFor<OfferDetailActivity>(Pair(EXTRA_OFFER_ID, offerId))
+        }
     }
 
     public override fun onCreate(savedInstanceState: Bundle?) {

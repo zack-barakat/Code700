@@ -15,6 +15,14 @@
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
 
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorAccent"/>
+
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_channel_id"
+                android:value="@string/default_notification_channel_id"/>
+
         <activity
                 android:name=".ui.splash.SplashActivity"
                 android:theme="@style/AppTheme.NoActionBar">
@@ -35,7 +43,16 @@
 
         <activity
                 android:name=".ui.offerdetail.OfferDetailActivity"
+                android:parentActivityName=".ui.offers.OffersActivity"
                 android:theme="@style/AppTheme"/>
+
+        <service
+                android:name=".services.MyFirebaseMessagingService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
 
     </application>
 </manifest>
